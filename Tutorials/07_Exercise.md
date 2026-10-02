@@ -33,7 +33,7 @@ The **Custom Business Configurations** app serves as an entry point to the confi
 3. In the Create dialog, fill in the required fields and click Continue:
    - **Sales Order Type**: select `Standard Order (OR)` from the dropdown
    - **Sales Organization**: select `US10`.
-   - Rest of the fields are optional.
+   - The rest of the fields are optional.
 
 4. On the Sales Order form, fill in the mandatory header fields:
    - **Sold-to Party:** Select `MXP Launcher`
@@ -44,7 +44,7 @@ The **Custom Business Configurations** app serves as an entry point to the confi
 
    > **Tip:** If you are unsure which fields are still missing, click the **Incompleteness Info** button in the toolbar — it lists all mandatory fields that still need a value.
 
-5. In `Items` section, enter the below values
+5. In the `Items` section, enter the values below:
    - Choose **Product** - `Finished Goods Product_2111 (FG05DE10)`.
    - Enter **Requested Quantity** as `10`.
 
@@ -88,7 +88,7 @@ The event handler also listens to the Changed (on_updated) event. Test this by m
 
 1. Open your Sales Order created in Step 2.
 
-2. Change **Priority** `P##` to `HIGH` and update **Requested Quantity** to `10000`.
+2. Change the **P## Priority** field to `HIGH` and update **Requested Quantity** to `10000`.
 
 3. Save the Sales Order and **Reload the page**.
 
@@ -125,6 +125,8 @@ The event handler also listens to the Changed (on_updated) event. Test this by m
 5. Click **OK** and then click **Schedule**. The application job is scheduled successfully.
 
 6. Wait for the job status to change to **Finished**. Refresh the list if needed.
+
+---
 
 ## Step 6 — Verify the Email Notification
 

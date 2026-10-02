@@ -1,15 +1,30 @@
 # Exercise 6 — SAPUI5 Adaptation (Optional)
 
-This exercise shows you how to work with SAPUI5 Adaptation Projects to extend a standard SAP Fiori application by generating a application variant and making simple changes to the variant in SAP S/4HANA Cloud Public Edition.
-
-> **Note:** Replace `##` with your two-digit partner/group number wherever it appears (e.g., `09`).
+This exercise shows you how to work with SAPUI5 Adaptation Projects to extend a standard SAP Fiori application by generating an application variant and making simple changes to the variant in SAP S/4HANA Cloud Public Edition.
 
 ## Create a new TR for saving the UI5 Adaptation changes.
 
 1. Open ADT and click **Transport Organizer** tab in the bottom window.
+
 2. In the **Transport Organizer** tab, expand your system and follow path **Workbench->1GT->/PW#/P##EXT**.
+
 3. Right click on the package and click **New Transport Request**.
+
 4. In the popup in **Short Description** field provide `P## UI Adaptation` and Click `Finish`.
+
+## Create package 
+
+Create a package to save the development objects of this exercise.
+
+1. From the list of Favorite Packages in Project Explorer, right-click on the package `/PW#/P##EXT` and choose **New → ABAP Package**.
+
+2. Provide:
+   - **Package Name:** `/PW#/P##_UI_ADT`
+   - **Description:** P## UI Adaptation
+
+   Click **Next**. Click **Next** again.
+
+3. Choose the option **Choose from requests in which I am involved**. Choose the transport request created above and click **Finish**.
 
 ## Create UI Adaptation project
 > **Note:** Alternatively to SAP Business Application Studio on BTP you can also use the [SAP Fiori Tools Extension in VS Code](../Use_VSCode/SAP_Fiori_Tools_Extension.md) and the command **Fiori: Open Adaptation Project Generator**
@@ -73,7 +88,7 @@ This exercise shows you how to work with SAPUI5 Adaptation Projects to extend a 
     - **SAPUI5 ABAP Repository**: /PW#/P##MCA 
     - **Enter an optional deployment description** - P## Manage Credit Accounts Simplified
     - Choose `Enter Manually` for the field **Select How You Want to Enter the Package**.
-    - Enter `/PW#/P##_UIA` in the **Package field**.(Create the package under the structure package `/PW#/P##EXT` in ADT if it is not already available).
+    - Enter `/PW#/P##_UI_ADT` in the **Package field**.
     - Choose `Enter Manually` for the field **Select How You Want to Enter the Transport Request**.
     - Provide the transport request created at the start of the exercise in the **Transport Request** field.
 
@@ -103,7 +118,7 @@ This exercise shows you how to work with SAPUI5 Adaptation Projects to extend a 
 
 ## Open Adaptation Editor
 
-To make the requested changes to the standard app, you need to extend the source code of your application variant in SAP Business Application Studio. In your workspace, navigate to the newly created SAPUI5 Adaptation Project under **P##UIA**. Open the **webapp** folder, right-click on the **manifest.appdescr_variant** file in your adaptation project and choose Open Adaptation Editor.
+To make the requested changes to the standard app, you need to extend the source code of your application variant in SAP Business Application Studio. In your workspace, navigate to the newly created SAPUI5 Adaptation Project under **P##UIA**. Open the **webapp** folder, right-click on the **manifest.appdescr_variant** file in your adaptation project and choose Open Adaptation Editor. Wait for few minutes until the Manage Credit Accounts app is loaded in the Adaptation Editor.
 
 ## Add a Clear button to the smart filter bar
 
@@ -114,7 +129,7 @@ To make the requested changes to the standard app, you need to extend the source
 
    - Save your changes.
 
-2. In your project workspace, the propertyChange you have just made is listed in the webapp folder under changes.
+2. In BAS, in your project workspace, the propertyChange you have just made is listed in the webapp folder under changes.
 
 3. After doing the changes a **clear** button will be visible in the smart filter bar.
 
@@ -173,7 +188,7 @@ To make the requested changes to the standard app, you need to extend the source
 ### Build and deploy your new application variant
 
 1. To build and deploy your application variant in **SAP Business Application Studio**, you can:
-   - Run the script **npm run deploy** in the Terminal(Right click on folder P##.creditaccounts.app.variant and click on **Open in Integrated Terminal** to view the terminal), 
+   - Run the script **npm run deploy** in the Terminal(Right click on folder p##.creditaccounts.app.variant and click on **Open in Integrated Terminal** to view the terminal), 
    OR
    - Double-click the package.json to open the file. Under “scripts”, hover your cursor over "deploy” and select `Run Script`.
 
@@ -191,7 +206,7 @@ To make the requested changes to the standard app, you need to extend the source
 
 1. Open and log onto ABAP Development Tools (ADT).
 
-2. In the Project Explorer, open your package and expand the **BSP Library** folder and then the **BSP Applications** folder to view the application variant you deployed in SAP Business Application Studio.
+2. In the Project Explorer, open your package `/PW#/P##_UI_ADT` and expand the **BSP Library** folder and then the **BSP Applications** folder to view the application variant you deployed in SAP Business Application Studio.
 
 ![BSP Application](Images/BSP%20application.png)
 
@@ -199,7 +214,7 @@ To make the requested changes to the standard app, you need to extend the source
 
 ![Fiori User Interface](Images/Fiori%20User%20Interface.png)
 
-4. Right-click on your package and choose **New –> Other ABAP Repository Object**.
+4. Right-click on your package `/PW#/P##_UI_ADT` and choose **New –> Other ABAP Repository Object**.
 
 5. In the ABAP Repository Object dialog box, search for IAM and select **IAM App** under the folder **Identity and Access Management**.
 
@@ -207,9 +222,9 @@ To make the requested changes to the standard app, you need to extend the source
 
 6. Choose **Next**.
 
-7. In the New IAM App dialog box, enter the package, name and description
-   **Name**: Enter `P##MCAIAM` after the default namespace.
-   **Description**: **P## Manage Credit Accounts Simplified**.
+7. In the New IAM App dialog box, enter the package `/PW#/P##_UI_ADT`, name and description
+   **Name**: Enter `/PW#/P##MCAIAM`.
+   **Description**: P## Manage Credit Accounts Simplified.
 
 8. In the **Application Type** field, select `UI Adaptation App`. The **Application ID Suffix** _UI5A is set automatically.
 
@@ -219,9 +234,9 @@ To make the requested changes to the standard app, you need to extend the source
 
 10. In the **Select Transport Request** dialog box, choose your transport request and choose **Finish**.
 
-11. In your package, expand the folder **Identity and Access Management –> IAM Apps** and you will see your newly created IAM app with the name you specified in step 7 and the suffix UI5A.
+11. In your package `/PW#/P##_UI_ADT`, expand the folder **Identity and Access Management –> IAM Apps** and you will see your newly created IAM app with the name you specified in step 7 and the suffix UI5A.
 
-12. Open your newly created **IAM App** in the **IAM Apps folder**. On the Overview tab, enter the **Fiori Launchpad App Description Item ID** that was generated automatically in your **Fiori User Interface folder –> Launchpad App Descriptor Items** with the name **<BSP application name>_UI5R**.
+12. Open your newly created **IAM App** in the **IAM Apps folder**. On the Overview tab, enter the **Fiori Launchpad App Descriptor Item ID** that was generated automatically in your **Fiori User Interface folder –> Launchpad App Descriptor Items** with the name **<BSP application name>_UI5R**.
 
 <img src="Images/IAM app overview.png" width="80%">
 
@@ -247,7 +262,7 @@ To make the requested changes to the standard app, you need to extend the source
 
 3. Enter the name and description
    **Name**: Enter `/PW#/P##_CAT_MCA`.
-   **Description**: **P## Business Catalog for Manage Credit Accounts Simplified**.
+   **Description**: P## Business Catalog for Manage Credit Accounts Simplified.
 
 <img src="Images/create BC.png" width="80%">
 
@@ -255,7 +270,7 @@ To make the requested changes to the standard app, you need to extend the source
 
 5. Select your transport request and choose **Finish**.
 
-6. The **Business Catalog IAM App Assignment** dialog box is displayed.In the **Package** field, browse and select your package.
+6. The **Business Catalog IAM App Assignment** dialog box is displayed.In the **Package** field, browse and select your package `/PW#/P##_UI_ADT`.
 
 7. Check the **assignment name** and **description**. Add **P##** at the start of the description and choose **Next**.
 
@@ -267,7 +282,7 @@ To make the requested changes to the standard app, you need to extend the source
 
 ### Create a Business Role Template and add the business catalog to it
 
-1. Right-click on your package and choose **New --> Other ABAP Repository Object**.
+1. Right-click on your package `/PW#/P##_UI_ADT` and choose **New --> Other ABAP Repository Object**.
 
 2. In the ABAP Repository Object dialog box, search for **Business Role** and select **Business Role Template** under **Identity and Access Management** folder.
 
@@ -276,8 +291,8 @@ To make the requested changes to the standard app, you need to extend the source
 3. Choose **Next**.
 
 4. In the **Business Role Template** dialog box, enter the name and description
-   **Name**: Enter **P##_BRT_MCA** after the default namespace.
-   **Description**: **P## Business Role Template for Manage Credit Accounts Simplified**.
+   **Name**: Enter `/PW#/P##_BRT_MCA`.
+   **Description**: P## Business Role Temp for Manage Credit Accounts Simplified.
 
 <img src="Images/Create BRT1.png" width="80%">
 
@@ -285,7 +300,7 @@ To make the requested changes to the standard app, you need to extend the source
 
 6. Choose **Finish**.
 
-7. In the **Business Role Template**, choose `Add` to add your newly created Business Catalog.
+7. In the **Business Role Template**, choose `Add` to add your newly created Business Catalog `/PW#/P##_CAT_MCA`.
 
 ![Add BC](Images/Add%20BC%20in%20BRT.png)
 

@@ -274,7 +274,7 @@ The Destination service lets you find the information that is required to access
     <img src="Images/Create destination.png" width="80%">
 </p>
 
-4. In the **Destination Details** section, enter the following detail:
+4. In the **Destination Details** section, enter the following details:
     - **Name**: Enter the respective development tenant name followed by _DEV. For example BGS_DEV or BI3_DEV or BCG_DEV.
     - **Type**: From the dropdown menu, select `HTTP`.
     - Provide a description for the destination. This is an optional field.

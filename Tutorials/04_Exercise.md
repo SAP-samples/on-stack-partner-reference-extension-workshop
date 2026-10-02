@@ -1,6 +1,6 @@
 # Exercise 4 — Application Job
 
-This exercise creates a recurring Application Job that sends customers email notifications with the Sales Order processing outcome (priority, action applied, net amount). It covers the ABAP class implementing the job logic, the job catalog entry and job template, the IAM/authorization setup and finally scheduling the job from the Fiori Launchpad.
+This exercise creates a recurring Application Job that sends customers email notifications with the Sales Order processing outcome (priority, action applied, net amount). It covers the ABAP class implementing the job logic, the job catalog entry and job template and the IAM/authorization setup.
 
 > **Note:** Replace `PW#` with the namespace of your system (`PW1`, `PW2`, or `PW3`) and `##` with your two-digit partner/group number wherever it appears (e.g., `09`).
 
@@ -246,7 +246,7 @@ When you create a job catalog entry and a job template as explained above, an ob
 
 5. Click **Next** and then click **Finish**.
 
-6. Open Business Catalog '/PW#/P##_EMAIL_JOB_BC', click **Publish Locally**. Wait for few minutes until the status changes to 'Published'.
+6. Open Business Catalog '/PW#/P##_EMAIL_JOB_BC', click **Publish Locally**. Wait for a few minutes until the status changes to 'Published'.
 
 ---
 
