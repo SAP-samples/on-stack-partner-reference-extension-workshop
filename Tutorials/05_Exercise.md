@@ -14,7 +14,7 @@ This exercise walks through creating and deploying a SAP Fiori Elements List Rep
 - The gCTS transport request (target `1GT`) you have been using in the previous exercises.
 - A BTP destination configured for your S/4HANA system.
 
-> **Note** Alternatively to SAP Business Application Studio on BTP you can also use the [SAP Fiori Tools Extension in VS Code](../Use_VSCode/SAP_Fiori_Tools_Extension.md) and the command **Fiori: Open Application Generator**
+> **Note:** Alternatively to SAP Business Application Studio on BTP you can also use the [SAP Fiori Tools Extension in VS Code](../Use_VSCode/SAP_Fiori_Tools_Extension.md) and the command **Fiori: Open Application Generator**
 
 ---
 
@@ -194,16 +194,6 @@ Add the below translatable texts in `webapp/i18n/i18n.properties` and save the f
 
    ![i18n.properties](Images/I18n_properties.png)
 
-> **Notes:**
-> - The **semantic object + action** pair (e.g. `P##AuditLog-display`) must be unique within the launchpad. Use your partner prefix to avoid collisions.
-> - On deployment, this inbound produces the log lines:
->   ```
->   Inbound P##AuditLog-display (P##AuditLog-display) was converted to LADI /PW#/P##AUDITLOG_UI5R
->   Launchpad App Descriptor Item /PW#/P##AUDITLOG_UI5R was created
->   SAPUI5 Application  has been uploaded and registered successfully
->   Deployment Successful.
->   ```
-
 ---
 
 ## Build and Deploy to S/4HANA
@@ -270,8 +260,6 @@ The wizard already generated the deployment configuration (`ui5-deploy.yaml`) an
 
    ![IAM App editor — Published](Images/ADT_IamApp_Published.png)
 
-   > **Note:** Publishing the IAM App auto-generates the runtime artifacts `/PW#/P##_AUDIT_LOG_APP_UI5A` and `/PW#/P##_AUDIT_LOG_APP_UI5_EXT` in your package. The *logical* IAM App is referenced by its bare name `/PW#/P##_AUDIT_LOG_APP`, but the actual runtime objects carry the `_UI5A` / `_UI5_EXT` suffixes.
-
 ---
 
 ## Create Business Catalog
@@ -292,7 +280,7 @@ The Business Catalog is the container that groups one or more IAM Apps so they c
 
 5. Click **Next** and then click **Finish**.
 
-6. Open Business Catalog '/PW#/P##_AUDIT_LOG_BC', click **Publish Locally**. Wait for few minutes until the status changes to 'Published'.
+6. Open Business Catalog '/PW#/P##_AUDIT_LOG_BC', click **Publish Locally**. Wait for a few minutes until the status changes to 'Published'.
 
 ---
 

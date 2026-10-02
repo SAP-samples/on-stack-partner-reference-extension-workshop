@@ -27,8 +27,6 @@ This guide is an alternative to SAP Business Application Studio (BAS). It walks 
    - **Connection Type:** ABAP Catalog.
    - **URL:** the URL to your S/4HANA system.
 
-   > **Note:** When connecting to an SAP S/4HANA Cloud system, enter the API URL (**-api.lab.s4hana.cloud.sap**) rather than the standard UI URL (**.lab.s4hana.cloud.sap**) in the connection settings.
-
    ![SAP Fiori Extension — SAP System Details](Images/VSCode_SAP_Fiori_New_SAP_System.png)
 
 5. Click **Test Connection**. A logon screen opens in the browser.

@@ -1,5 +1,44 @@
 # Exercise 1 — Business Configuration Maintenance Object
 
+> **Note:** Replace `PW#` with the namespace of your system (`PW1`, `PW2`, or `PW3`) and `##` with your two-digit partner/group number wherever it appears (e.g., `09`).
+>
+> OR
+>
+> Follow the steps below to clone the repository into Visual Studio Code and replace all occurrences of `PW#` and `P##` at once.
+>
+> 1. Open Visual Studio Code (download it from [code.visualstudio.com](https://code.visualstudio.com) if needed).
+>
+> 2. In the top menu bar, click **Terminal** and select **New Terminal**.
+>
+> 3. After the terminal opens, navigate to the folder where you want to clone the repo.
+>
+> 4. Run the following command to clone the repository to your chosen folder:
+>
+>    ```bash
+>    git clone https://github.com/SAP-samples/on-stack-partner-reference-extension-workshop.git
+>    ```
+>
+> 5. Click **File** and then click **Open Folder…**.
+>
+>    ![Open Folder](Images/Open%20folder%20in%20vs%20code.png)
+>
+> 6. Select the downloaded folder.
+>
+> 7. Click the search icon shown below.
+>
+>    ![Search](Images/Search%20in%20VScode.png)
+>
+> 8. Enter `PW#` in the **Search** field and your system (`PW1`, `PW2`, or `PW3`) in the **Replace** field.
+>
+>    ![replace](Images/replace%20in%20vscode.png)
+>
+> 9. Click **Preserve Case** then click **Replace All**.
+>
+> 10. Similarly, replace P## with P followed by your two-digit partner/group number (e.g., `P09`).
+>
+> 11. Open each exercise in preview mode and follow the steps.
+
+
 This exercise shows you how to create an SAP Fiori based Table Maintenance app using the ABAP RESTful Application Programming Model (RAP) and the Custom Business Configurations (CUBCO) app. This exercise is based on a table which stores the Priority and amount combination that will determine the action to be taken for sales order.
 
 You first create the database tables and then use the ABAP Repository Generator to create the required repository objects.
@@ -186,7 +225,7 @@ You first create the database tables and then use the ABAP Repository Generator 
 
 ## Create Business Configuration Maintenance Object
 
-A Business Configuration Maintenance Object declares a Service Binding as relevant for business configuration. They are listed in the **Custom Business Configurations** app. Selecting an entry in the app renders an SAP Fiori elements-based UI to maintain the business configuration.
+A Business Configuration Maintenance Object declares a Service Binding as relevant for business configuration. It is listed in the **Custom Business Configurations** app. Selecting an entry in the app renders an SAP Fiori elements-based UI to maintain the business configuration.
 
 ABAP Repository Generator allows you to create the required repository objects, including the RAP business object, service binding and business configuration maintenance object.
 
@@ -300,7 +339,7 @@ First, you create the IAM app yourself. As a next step, you create a business ca
 
 10. Save the IAM App. 
 
-11. Click on Publish Locally button to publish the IAM app. Wait for few minutes until the status changes to 'Published'.
+11. Click on Publish Locally button to publish the IAM app. Wait for a few minutes until the status changes to 'Published'.
 
 12. The IAM app status shows as `Published` and the `Restriction Type Migration Status` as `Migrated`.
 
@@ -326,7 +365,7 @@ First, you create the IAM app yourself. As a next step, you create a business ca
 
    ![BC 2](Images/BC%202.png)
 
-5. In the Business Catalog, click **Publish Locally**. Wait for few minutes until the status changes to 'Published'.
+5. Open the Business Catalog `/PW#/P##_BCM_MAINT_BC` and click **Publish Locally**. Wait for a few minutes until the status changes to 'Published'.
 
    ![BC 3](Images/BC%203.png)
 

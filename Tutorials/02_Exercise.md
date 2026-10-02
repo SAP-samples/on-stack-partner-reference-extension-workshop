@@ -158,7 +158,7 @@ This exercise creates a Sales Order Log table that records each automated action
    _CreatedByUser
    ```
 
-   Now, the R view looks like below:
+   Now, the R view looks as shown below:
 
    ![R View 2](Images/R%20View%202.png)
 
