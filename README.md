@@ -1,4 +1,5 @@
 # On-Stack Partner Reference Extension Workshop
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/on-stack-partner-reference-extension-workshop](https://api.reuse.software/info/github.com/SAP-samples/on-stack-partner-reference-extension-workshop)
 
 ## Description
 
